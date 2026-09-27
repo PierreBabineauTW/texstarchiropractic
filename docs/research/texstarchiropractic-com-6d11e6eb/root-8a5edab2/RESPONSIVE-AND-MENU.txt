@@ -1,0 +1,139 @@
+================ RESPONSIVE ================
+--- desktop-1440  docH=8502
+  -- headings
+     H1 50px/53px  "Improve your quality of life with personalize"
+     H2 38px/44px  "Let us get to the Root of your Pain"
+     H1 50px/53px  "$98"
+     H2 38px/44px  "New Patient Special:"
+     H4 24px/29px  "Mention this Special Offer when Scheduling"
+     H3 33px/40px  "This Includes:"
+     H3 33px/40px  "This Includes:"
+     H4 24px/29px  "An initial consultation to identify your heal"
+     H4 24px/29px  "A thorough neuro-musculo-skeletal exam to ide"
+     H4 24px/29px  "A treatment session using one of our advanced"
+     H4 24px/29px  "A one-on-one follow up consultation with your"
+     H2 38px/44px  "Personalized Treatment and Solutions"
+     H4 24px/29px  "Back Pain"
+     H4 24px/29px  "Neck Pain"
+     H4 24px/29px  "Knee Pain"
+     H4 24px/29px  "Headaches"
+     H2 38px/44px  "Our Commitment to You"
+     H4 24px/29px  "Personalized Care"
+     H4 24px/29px  "Long-lasting Results"
+     H4 24px/29px  "Holistic Solutions"
+     H2 38px/44px  "TexStar Locations"
+     H2 38px/44px  "Your TexStar Local Chiropractic Team"
+     H3 33px/40px  "We are dedicated to the local Central Texas c"
+     H2 38px/44px  "Reviews and Testimonials from our Clients"
+     H2 38px/44px  "The TexStar Health Blog"
+     H5 20px/25px  "Top 5 Ways to Protect Your Child’s Spine Duri"
+     H5 20px/25px  "Did You Hear TexStar Chiropractic on the Radi"
+     H5 20px/25px  "The GLP-1 Skeleton: Managing Joint Pain Durin"
+     H5 20px/25px  "Receive TexStar Health Tips Right in your Inb"
+     H5 20px/25px  "Voted Best Chiropractor in the Austin area by"
+
+--- tablet-768  docH=9681
+  -- headings
+     H1 43px/45px  "Improve your quality of life with personalize"
+     H2 32px/37px  "Let us get to the Root of your Pain"
+     H1 43px/45px  "$98"
+     H2 32px/37px  "New Patient Special:"
+     H4 20px/25px  "Mention this Special Offer when Scheduling"
+     H3 28px/34px  "This Includes:"
+     H3 28px/34px  "This Includes:"
+     H4 20px/25px  "An initial consultation to identify your heal"
+     H4 20px/25px  "A thorough neuro-musculo-skeletal exam to ide"
+     H4 20px/25px  "A treatment session using one of our advanced"
+     H4 20px/25px  "A one-on-one follow up consultation with your"
+     H2 32px/37px  "Personalized Treatment and Solutions"
+     H4 20px/25px  "Back Pain"
+     H4 20px/25px  "Neck Pain"
+     H4 20px/25px  "Knee Pain"
+     H4 20px/25px  "Headaches"
+     H2 32px/37px  "Our Commitment to You"
+     H4 20px/25px  "Personalized Care"
+     H4 20px/25px  "Long-lasting Results"
+     H4 20px/25px  "Holistic Solutions"
+     H2 32px/37px  "TexStar Locations"
+     H2 32px/37px  "Your TexStar Local Chiropractic Team"
+     H3 20px/26px  "We are dedicated to the local Central Texas c"
+     H2 32px/37px  "Reviews and Testimonials from our Clients"
+     H2 32px/37px  "The TexStar Health Blog"
+     H5 17px/21px  "Top 5 Ways to Protect Your Child’s Spine Duri"
+     H5 17px/21px  "Did You Hear TexStar Chiropractic on the Radi"
+     H5 17px/21px  "The GLP-1 Skeleton: Managing Joint Pain Durin"
+     H5 17px/21px  "Receive TexStar Health Tips Right in your Inb"
+     H5 17px/21px  "Voted Best Chiropractor in the Austin area by"
+
+--- mobile-390  docH=14433
+  -- headings
+     H1 32px/38px  "Improve your quality of life with personalize"
+     H2 24px/31px  "Let us get to the Root of your Pain"
+     H1 32px/38px  "$98"
+     H2 24px/31px  "New Patient Special:"
+     H4 18px/25px  "Mention this Special Offer when Scheduling"
+     H3 20px/25px  "This Includes:"
+     H3 20px/25px  "This Includes:"
+     H4 18px/25px  "An initial consultation to identify your heal"
+     H4 18px/25px  "A thorough neuro-musculo-skeletal exam to ide"
+     H4 18px/25px  "A treatment session using one of our advanced"
+     H4 18px/25px  "A one-on-one follow up consultation with your"
+     H2 24px/31px  "Personalized Treatment and Solutions"
+     H4 18px/25px  "Back Pain"
+     H4 18px/25px  "Neck Pain"
+     H4 18px/25px  "Knee Pain"
+     H4 18px/25px  "Headaches"
+     H2 24px/31px  "Our Commitment to You"
+     H4 18px/25px  "Personalized Care"
+     H4 18px/25px  "Long-lasting Results"
+     H4 18px/25px  "Holistic Solutions"
+     H2 24px/31px  "TexStar Locations"
+     H2 24px/31px  "Your TexStar Local Chiropractic Team"
+     H3 20px/25px  "We are dedicated to the local Central Texas c"
+     H2 24px/31px  "Reviews and Testimonials from our Clients"
+     H2 24px/31px  "The TexStar Health Blog"
+     H5 17px/24px  "Top 5 Ways to Protect Your Child’s Spine Duri"
+     H5 17px/24px  "Did You Hear TexStar Chiropractic on the Radi"
+     H5 17px/24px  "The GLP-1 Skeleton: Managing Joint Pain Durin"
+     H5 17px/24px  "Receive TexStar Health Tips Right in your Inb"
+     H5 17px/24px  "Voted Best Chiropractor in the Austin area by"
+
+================ SIDEMENU STYLE DETAIL ================
+  <undefined [mfn-builder-content mfn-sidemenu-tmpl-builder]> "✕TexStar Solutions Chiropractic Care Cold La"
+     disp=flex pos=static bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":844,"top":0,"left":140} transition=all
+  <undefined [mfn-sidemenu-closebutton]> "✕"
+     disp=flex pos=absolute bg=rgb(253, 252, 250) color=rgb(234, 118, 0) fs=32px fw=400 lh=32px pad=0px br=0px border=0px none rgb(234, 118, 0) rect={"w":40,"h":40,"top":12,"left":332} transition=all
+  <undefined [section mcb-section mfn-default-section mcb-section-7qzunyjxp]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=block pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":438,"top":0,"left":140} transition=all
+  <undefined [mcb-background-overlay]> ""
+     disp=block pos=absolute bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":438,"top":0,"left":140} transition=all
+  <undefined [section_wrapper mfn-wrapper-for-wraps mcb-section-inner mcb-section-inner-7qzunyjxp]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=flex pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":438,"top":0,"left":140} transition=all
+  <undefined [wrap mcb-wrap mcb-wrap-rziacob6p one tablet-one laptop-one mobile-one vb-item clearfix tes]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=flex pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":438,"top":0,"left":140} transition=all
+  <undefined [mcb-wrap-inner mcb-wrap-inner-rziacob6p mfn-module-wrapper mfn-wrapper-for-wraps]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=flex pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=50px 8px 0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":438,"top":0,"left":140} transition=all
+  <undefined [mcb-wrap-background-overlay]> ""
+     disp=block pos=absolute bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":250,"h":438,"top":0,"left":140} transition=all
+  <undefined [column mcb-column mcb-item-v71zlldir one laptop-one tablet-one mobile-one column_sidemenu_]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=block pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":234,"h":226,"top":50,"left":148} transition=all
+  <undefined [mcb-column-inner mfn-module-wrapper mcb-column-inner-v71zlldir mcb-item-sidemenu_menu-inne]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=block pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=10px 0px 0px br=0px border=0px none rgb(56, 47, 45) rect={"w":210,"h":206,"top":50,"left":160} transition=all
+  <undefined [mfn-menu-wrapper]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=block pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":210,"h":196,"top":60,"left":160} transition=all
+  <undefined [mfn-sidemenu-menu mfn-menu-icon-left mfn-menu-submenu-on mfn-menu-submenu-toggled mfn-menu]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=flex pos=static bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=13px fw=400 lh=19px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":210,"h":196,"top":60,"left":160} transition=all
+  <undefined [menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-]> "TexStar Solutions Chiropractic Care Cold Las"
+     disp=flex pos=relative bg=rgba(0, 0, 0, 0) color=rgb(56, 47, 45) fs=16px fw=400 lh=32px pad=0px br=0px border=0px none rgb(56, 47, 45) rect={"w":210,"h":49,"top":60,"left":160} transition=all
+  <undefined [mfn-menu-link]> "TexStar Solutions"
+     disp=flex pos=static bg=rgba(0, 0, 0, 0) color=rgb(115, 116, 140) fs=16px fw=600 lh=32px pad=8px 0px 9px br=0px border=0px none rgb(115, 116, 140) rect={"w":210,"h":49,"top":60,"left":160} transition=all
+  <undefined [label-wrapper mfn-menu-label-wrapper]> "TexStar Solutions"
+     disp=block pos=static bg=rgba(0, 0, 0, 0) color=rgb(115, 116, 140) fs=16px fw=600 lh=32px pad=0px br=0px border=0px none rgb(115, 116, 140) rect={"w":134,"h":32,"top":68,"left":160} transition=all
+  <undefined [menu-label]> "TexStar Solutions"
+     disp=inline pos=static bg=rgba(0, 0, 0, 0) color=rgb(115, 116, 140) fs=16px fw=600 lh=32px pad=0px br=0px border=0px none rgb(115, 116, 140) rect={"w":134,"h":22,"top":73,"left":160} transition=all
+  <undefined [outer-menu-sub]> ""
+     disp=flex pos=absolute bg=rgba(0, 0, 0, 0) color=rgb(0, 94, 184) fs=20px fw=400 lh=20px pad=0px br=0px border=0px none rgb(0, 94, 184) rect={"w":30,"h":20,"top":64,"left":340} transition=all
+  <undefined [icon-down-open]> ""
+     disp=block pos=static bg=rgba(0, 0, 0, 0) color=rgb(234, 118, 0) fs=20px fw=400 lh=20px pad=0px br=0px border=0px none rgb(234, 118, 0) rect={"w":20,"h":20,"top":64,"left":345} transition=transform 0.3s ease-out
+
+================ REVIEWS CAROUSEL ================

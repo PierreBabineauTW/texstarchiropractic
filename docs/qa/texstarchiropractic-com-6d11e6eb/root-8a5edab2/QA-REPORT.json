@@ -1,0 +1,75 @@
+{
+  "cloneUrl": "http://127.0.0.1:3111/",
+  "checks": {
+    "desktop-1440": {
+      "errors": [],
+      "scrolledHeader": {
+        "pos": "fixed",
+        "h": 65
+      },
+      "hasBurger": true,
+      "menuOpen": {
+        "left": 1190,
+        "w": 250,
+        "bodyOverflow": "hidden"
+      },
+      "accordionBefore": "false",
+      "accordionAfter": "true",
+      "menuClosed": {
+        "left": 1440,
+        "bodyOverflow": "(unset)"
+      }
+    },
+    "tablet-768": {
+      "errors": [],
+      "scrolledHeader": {
+        "pos": "fixed",
+        "h": 65
+      },
+      "hasBurger": true,
+      "menuOpen": {
+        "left": 518,
+        "w": 250,
+        "bodyOverflow": "hidden"
+      },
+      "accordionBefore": "false",
+      "accordionAfter": "true",
+      "menuClosed": {
+        "left": 768,
+        "bodyOverflow": "(unset)"
+      }
+    },
+    "mobile-390": {
+      "errors": [],
+      "scrolledHeader": {
+        "pos": "fixed",
+        "h": 89
+      },
+      "hasBurger": true,
+      "menuOpen": {
+        "left": 140,
+        "w": 250,
+        "bodyOverflow": "hidden"
+      },
+      "accordionBefore": "false",
+      "accordionAfter": "true",
+      "menuClosed": {
+        "left": 390,
+        "bodyOverflow": "(unset)"
+      }
+    },
+    "carousel": {
+      "found": true,
+      "hasTrack": true,
+      "hasNext": true,
+      "hasReadMore": true,
+      "before": "matrix(1, 0, 0, 1, 0, 0)",
+      "cardCount": 6
+    },
+    "carouselTransform": {
+      "before": "none",
+      "after": "none",
+      "changed": false
+    }
+  }
+}

@@ -7,9 +7,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Geist", "Geist Fallback", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", "Geist Mono Fallback", ui-monospace, monospace;
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-heading: var(--font-open-sans);
+  --font-body: var(--font-poppins);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -48,73 +49,76 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+/*
+ * TexStar Chiropractic palette — every value below is a literal rgb() read off
+ * the live site with getComputedStyle(). Do not "improve" these.
+ */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --background: #fdfcfa; /* rgb(253, 252, 250) */
+  --foreground: #382f2d; /* rgb(56, 47, 45)   */
+  --card: #ffffff;
+  --card-foreground: #382f2d;
+  --popover: #ffffff;
+  --popover-foreground: #382f2d;
+  --primary: #005eb8; /* rgb(0, 94, 184)    */
+  --primary-foreground: #ffffff;
+  --secondary: #ea7600; /* rgb(234, 118, 0)  */
+  --secondary-foreground: #ffffff;
+  --muted: #faf9f6; /* rgb(250, 249, 246)  */
+  --muted-foreground: #73748c; /* rgb(115, 116, 140) */
+  --accent: #f3f0e8; /* rgb(243, 240, 232)  */
+  --accent-foreground: #382f2d;
+  --destructive: #c2410c;
+  --border: #e5e3df; /* rgb(229, 227, 223)  */
+  --input: #e5e3df;
+  --ring: #005eb8;
+  --chart-1: #005eb8;
+  --chart-2: #ea7600;
+  --chart-3: #339bff;
+  --chart-4: #ffb262;
+  --chart-5: #73748c;
+  --radius: 0.5rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #382f2d;
+  --sidebar-primary: #005eb8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f3f0e8;
+  --sidebar-accent-foreground: #382f2d;
+  --sidebar-border: #e5e3df;
+  --sidebar-ring: #005eb8;
+
+  /* ---- site-specific tokens (not part of the shadcn scale) ---- */
+  --ts-blue: #005eb8;
+  --ts-blue-light: #339bff;
+  --ts-orange: #ea7600;
+  --ts-orange-light: #ffb262;
+  --ts-ink: #382f2d;
+  --ts-offwhite: #fdfcfa;
+  --ts-cream: #faf9f6;
+  --ts-beige: #f3f0e8;
+  --ts-line: #e5e3df;
+  --ts-slate: #73748c;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #1a1615;
+  --foreground: #fdfcfa;
+  --card: #241f1e;
+  --card-foreground: #fdfcfa;
+  --popover: #241f1e;
+  --popover-foreground: #fdfcfa;
+  --primary: #339bff;
+  --primary-foreground: #ffffff;
+  --secondary: #ea7600;
+  --secondary-foreground: #ffffff;
+  --muted: #2c2625;
+  --muted-foreground: #a3a5b8;
+  --accent: #322b29;
+  --accent-foreground: #fdfcfa;
+  --destructive: #ef4444;
+  --border: #3a3332;
+  --input: #3a3332;
+  --ring: #339bff;
 }
 
 @layer base {
@@ -123,8 +127,45 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* the off-canvas side menu is parked 100% to the right of the viewport;
+       clip keeps it from adding horizontal scroll without creating a
+       scroll container (which would break sticky/fixed descendants) */
+    overflow-x: clip;
   }
   html {
     @apply font-sans;
+    /* the live site uses native scrolling: scroll-behavior is `auto` */
+    scroll-behavior: auto;
+    /* the off-canvas side menu is parked 100% to the right of the viewport */
+    overflow-x: clip;
+  }
+  /* No global `p` font-family rule: the live page mixes Open Sans and Poppins
+     per section, so every <p> opts in explicitly (font-sans or font-body). */
+}
+
+@layer components {
+  /* Hero wash: radial-gradient(at 50% 100%, #FFB262 0%, #EA7600 100%) */
+  .ts-gradient-hero {
+    background-image: radial-gradient(at 50% 100%, #ffb262 0%, #ea7600 100%);
+  }
+  /* Offer panel: linear-gradient(0deg, #005EB8 0%, #339BFF 100%) */
+  .ts-gradient-blue {
+    background-image: linear-gradient(0deg, #005eb8 0%, #339bff 100%);
+  }
+  /* Cream page wash, 0deg variant (solutions / commit / reviews) */
+  .ts-gradient-cream {
+    background-image: linear-gradient(rgb(250, 249, 246) 0%, rgb(255, 255, 255) 100%);
+  }
+  /* Cream page wash, 0deg variant (root pain) */
+  .ts-gradient-cream-up {
+    background-image: linear-gradient(0deg, rgb(250, 249, 246) 0%, rgb(255, 255, 255) 100%);
+  }
+  /* Footer wash: linear-gradient(0deg, #F3F0E8 0%, #FFF 100%) */
+  .ts-gradient-footer {
+    background-image: linear-gradient(0deg, rgb(243, 240, 232) 0%, rgb(255, 255, 255) 100%);
+  }
+  /* Offer row bar: linear-gradient(#EA7600, #FFB262) with a 100px right round */
+  .ts-gradient-orange {
+    background-image: linear-gradient(rgb(234, 118, 0), rgb(255, 178, 98));
   }
 }
