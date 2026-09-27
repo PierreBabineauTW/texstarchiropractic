@@ -8,7 +8,7 @@ import { Button } from "../shared/Button";
 import { siteContent } from "../shared/content";
 import { ChevronDownIcon } from "../shared/icons";
 
-const SITE = "https://texstarchiropractic.com";
+const SITE = siteContent.brand.origin;
 
 export type SideMenuProps = {
   open: boolean;
@@ -83,16 +83,24 @@ export function SideMenu({ open, onClose }: SideMenuProps) {
                         {group.label}
                       </a>
 
+                      {/*
+                        The live chevron is a 30x20 tap target, under the 24px
+                        minimum height. The button grows to 44x44 for touch and
+                        the glyph is nudged back by (7, 4)px so its optical
+                        position is unchanged. The box stays flush at right-0:
+                        the drawer's right edge IS the viewport edge, so a
+                        negative offset would push it off screen.
+                      */}
                       <button
                         type="button"
                         onClick={() => setOpenGroup(expanded ? null : group.label)}
                         aria-expanded={expanded}
                         aria-controls={panelId}
-                        className="absolute right-0 top-1 flex h-5 w-[30px] items-center justify-center text-[#EA7600]"
+                        className="absolute right-0 top-0 flex size-11 items-center justify-center text-[#EA7600]"
                       >
                         <ChevronDownIcon
                           className={cn(
-                            "h-5 w-5 transition-transform duration-300 ease-out",
+                            "h-5 w-5 translate-x-[7px] translate-y-[4px] transition-transform duration-300 ease-out",
                             expanded && "rotate-180"
                           )}
                         />

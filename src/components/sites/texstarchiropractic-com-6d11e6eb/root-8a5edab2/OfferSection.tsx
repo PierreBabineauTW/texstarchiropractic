@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 
 import { Button } from "../shared/Button";
 
-const SITE_ROOT = "/sites/texstarchiropractic-com-6d11e6eb/root-8a5edab2";
+const SITE_ROOT = siteContent.brand.assetBase;
 
 const stepIcons: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   chart: OfferChartIcon,

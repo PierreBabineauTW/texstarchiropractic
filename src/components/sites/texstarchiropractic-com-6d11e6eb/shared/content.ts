@@ -6,6 +6,8 @@ const B = "https://texstarchiropractic.com";
 export const siteContent: SiteContent = {
   brand: {
     name: "TexStar Chiropractic",
+    origin: B,
+    assetBase: A,
     phone: "+1 (512) 899-2228",
     phoneHref: "tel:+15128992228",
     address: "Central Texas",
@@ -383,6 +385,14 @@ export const siteContent: SiteContent = {
     { label: "Hours and Locations", href: `${B}/locations/` },
     { label: "Join the Team", href: `${B}/join-our-team/` },
   ],
+
+  footerAbout: {
+    linksHeading: "ABOUT US",
+    socialHeading: "TEXSTAR SOCIAL",
+    awardCaption: "Voted Best Chiropractor in the Austin area by Statesman",
+    reviewCount: "648 reviews",
+    reviewBadgeImage: `${A}/images/google-reviews-badge.png`,
+  },
 
   social: [
     { label: "Facebook", href: "https://www.facebook.com/texstarchiropractic", icon: "facebook" },

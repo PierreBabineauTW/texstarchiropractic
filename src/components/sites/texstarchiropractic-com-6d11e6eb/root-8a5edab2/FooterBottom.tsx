@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { siteContent } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shared/content";
 
-const IMAGES = "/sites/texstarchiropractic-com-6d11e6eb/root-8a5edab2/images";
+const IMAGES = `${siteContent.brand.assetBase}/images`;
 
 /** Colour (not white) wordmark, logo left / copyright right, hairline rule above. */
 export function FooterBottom() {

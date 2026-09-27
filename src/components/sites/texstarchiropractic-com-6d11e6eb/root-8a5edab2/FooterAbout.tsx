@@ -12,13 +12,7 @@ import {
 import { Button } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shared/Button";
 import type { SocialLink } from "@/types/texstarchiropractic-com-6d11e6eb";
 
-const IMAGES = "/sites/texstarchiropractic-com-6d11e6eb/root-8a5edab2/images";
-
-/* These two block headings are not carried by the content file. */
-const ABOUT_HEADING = "ABOUT US";
-const SOCIAL_HEADING = "TEXSTAR SOCIAL";
-const AWARD_CAPTION = "Voted Best Chiropractor in the Austin area by Statesman";
-const REVIEW_COUNT = "648 reviews";
+const IMAGES = `${siteContent.brand.assetBase}/images`;
 
 const socialIcons: Record<SocialLink["icon"], ComponentType<SVGProps<SVGSVGElement>>> = {
   facebook: FacebookIcon,
@@ -33,12 +27,13 @@ const socialIcons: Record<SocialLink["icon"], ComponentType<SVGProps<SVGSVGEleme
  * (one-fifth / one-fifth / one-fourth / one-third = 244 / 244 / 305 / 407).
  */
 export function FooterAbout() {
+  const { footerAbout } = siteContent;
   return (
     <section className="relative pt-[15px]">
       <div className="mx-auto grid max-w-[1220px] grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-8 lg:flex lg:justify-between lg:gap-0">
         <div className="px-3 lg:w-1/5">
           <h6 className="mb-3 text-[17px] leading-[28px] font-bold text-[#382F2D] uppercase">
-            {ABOUT_HEADING}
+            {footerAbout.linksHeading}
           </h6>
           <ul className="flex flex-col gap-2.5">
             {siteContent.footerAboutLinks.map((link) => (
@@ -56,7 +51,7 @@ export function FooterAbout() {
 
         <div className="px-3 lg:w-1/5">
           <h6 className="mb-3 text-[17px] leading-[28px] font-bold text-[#382F2D] uppercase">
-            {SOCIAL_HEADING}
+            {footerAbout.socialHeading}
           </h6>
           <ul className="mt-1 flex flex-row gap-6">
             {siteContent.social.map((link) => {
@@ -87,7 +82,7 @@ export function FooterAbout() {
             className="mx-auto mb-4 h-auto w-[200px] md:w-[281px]"
           />
           <h5 className="mx-auto mb-[35px] max-w-[300px] text-[20px] leading-[25px] font-semibold text-[#382F2D] text-center">
-            {AWARD_CAPTION}
+            {footerAbout.awardCaption}
           </h5>
         </div>
 
@@ -97,7 +92,7 @@ export function FooterAbout() {
             className="mb-10 flex h-[60px] w-full items-center justify-between gap-3 rounded-none bg-[#EA7600] px-5"
           >
             <span className="text-[16px] leading-[24px] font-semibold text-white">
-              {REVIEW_COUNT}
+              {footerAbout.reviewCount}
             </span>
             <span className="flex items-center gap-0.5 text-white">
               {Array.from({ length: 5 }, (_, index) => (
@@ -107,7 +102,7 @@ export function FooterAbout() {
             {/* The capture shows the single-colour white Google wordmark, not the
                 multi-colour G mark, so the badge asset is used. */}
             <Image
-              src={`${IMAGES}/google-reviews-badge.png`}
+              src={footerAbout.reviewBadgeImage}
               alt="Google"
               width={102}
               height={34}

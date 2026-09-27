@@ -75,6 +75,10 @@ export type SocialLink = {
 export type SiteContent = {
   brand: {
     name: string;
+    /** canonical origin of the source site; every internal link is built from it */
+    origin: string;
+    /** path prefix under /public for this page's downloaded assets */
+    assetBase: string;
     phone: string;
     phoneHref: string;
     address: string;
@@ -159,6 +163,14 @@ export type SiteContent = {
   navigation: NavGroup[];
   footerColumns: FooterColumn[];
   footerAboutLinks: NavChild[];
+  /** headings and strings the lower footer strip needs, kept beside the rest of the copy */
+  footerAbout: {
+    linksHeading: string;
+    socialHeading: string;
+    awardCaption: string;
+    reviewCount: string;
+    reviewBadgeImage: string;
+  };
   social: SocialLink[];
   footerNote: string;
 };

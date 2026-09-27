@@ -142,7 +142,10 @@ export function ReviewsSection() {
                         <button
                           type="button"
                           onClick={() => toggle(review.id)}
-                          className={CARD_TEXT + " text-left text-[#73748C]"}
+                          /* -my-1.5 py-1.5 lifts the 23px line box to a 35px tap
+                             target; the negative margin cancels the padding so
+                             the surrounding text does not move */
+                          className={CARD_TEXT + " -my-1.5 py-1.5 text-left text-[#73748C]"}
                         >
                           {isOpen ? "Read less" : "Read more"}
                         </button>

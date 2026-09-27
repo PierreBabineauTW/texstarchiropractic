@@ -3,7 +3,7 @@ import Image from "next/image";
 import { siteContent } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shared/content";
 import { Button } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shared/Button";
 
-const SITE_ROOT = "/sites/texstarchiropractic-com-6d11e6eb/root-8a5edab2";
+const SITE_ROOT = siteContent.brand.assetBase;
 
 /**
  * The live site floats a 15%-wide image at `margin-left: 5%` inside the 585px

@@ -4,7 +4,7 @@ import { Button } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shar
 import { siteContent } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shared/content";
 
 const MARKER =
-  "/sites/texstarchiropractic-com-6d11e6eb/root-8a5edab2/images/map-marker-star.svg";
+  `${siteContent.brand.assetBase}/images/map-marker-star.svg`;
 
 /**
  * The live section is an Elfsight Google-Maps embed (tiles fetched at runtime,

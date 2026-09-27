@@ -141,6 +141,34 @@
   }
   /* No global `p` font-family rule: the live page mixes Open Sans and Poppins
      per section, so every <p> opts in explicitly (font-sans or font-body). */
+
+  /*
+   * Keyboard focus. The scaffold only inherits the UA's 1px outline in
+   * `outline-ring/50` (50% alpha), which is easy to lose against the blue
+   * header and the white-bordered CTAs. Replace it with a solid 2px ring plus a
+   * small offset. Pointer focus is deliberately untouched, and the outline
+   * inherits each element's own border-radius, so circles stay circular.
+   */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /*
+   * Motion opt-out. The page only animates state transitions (side-menu slide,
+   * carousel advance, chevron rotate, link colour). Honouring reduced-motion
+   * means dropping the travel and the duration, not removing the state change.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer components {

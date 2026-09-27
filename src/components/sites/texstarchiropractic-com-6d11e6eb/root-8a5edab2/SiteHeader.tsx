@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { Button } from "../shared/Button";
+import { siteContent } from "../shared/content";
 import { MenuFineIcon } from "../shared/icons";
 
-const SITE = "https://texstarchiropractic.com";
-const IMAGES = "/sites/texstarchiropractic-com-6d11e6eb/root-8a5edab2/images";
+const SITE = siteContent.brand.origin;
+const IMAGES = `${siteContent.brand.assetBase}/images`;
 
 /** The rendered height of the desktop header; the live site swaps at exactly this point. */
 const SCROLL_TRIGGER = 192;
@@ -80,11 +81,25 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
             </Button>
           </div>
 
-          <div className="flex items-center gap-5 md:hidden">
-            <Button href={`${SITE}/schedule-consultation/`} variant="outlineWhite">
+          <div className="flex items-center gap-2.5 min-[380px]:gap-5 md:hidden">
+            {/*
+              The live mobile header is a fixed 390px: logo 42 + two CTAs +
+              burger. At 360/375 that overflowed and clipped the burger, so below
+              380px the CTAs tighten their horizontal padding and the gap closes.
+              Type size, radius, weight and border are untouched.
+            */}
+            <Button
+              href={`${SITE}/schedule-consultation/`}
+              variant="outlineWhite"
+              className="px-3 min-[380px]:px-5"
+            >
               Online Scheduler
             </Button>
-            <Button href="tel:+15128992228" variant="outlineWhite">
+            <Button
+              href="tel:+15128992228"
+              variant="outlineWhite"
+              className="px-3 min-[380px]:px-5"
+            >
               Call Us
             </Button>
           </div>
@@ -96,7 +111,7 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
             aria-expanded={menuOpen}
             className={cn(
               "flex h-[39px] w-[38px] items-center justify-center rounded-[2px] border-2 border-[#FDFCFA] text-[#FDFCFA]",
-              "transition-colors duration-200 ease-in-out md:h-[50px] md:w-[50px]"
+              "md:h-[50px] md:w-[50px]"
             )}
           >
             <MenuFineIcon className="h-[14px] w-[18px] md:h-[19px] md:w-[25px]" />
