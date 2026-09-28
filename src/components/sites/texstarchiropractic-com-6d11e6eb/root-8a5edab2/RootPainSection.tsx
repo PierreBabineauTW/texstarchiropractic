@@ -34,6 +34,8 @@ export function RootPainSection() {
                 alt={rootPain.imageAlt}
                 width={1169}
                 height={888}
+                /* Rendered 350 @390, 300 @768, 458 @1024, 556 @1440. */
+                sizes="(min-width: 1024px) 560px, (min-width: 768px) 45vw, 350px"
                 className="h-full w-full object-cover"
               />
             </div>

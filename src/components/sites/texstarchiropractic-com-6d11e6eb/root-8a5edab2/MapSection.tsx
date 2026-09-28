@@ -34,13 +34,14 @@ export function MapSection() {
             <a
               key={marker.name}
               href={marker.href}
+              /* the name goes on the link; the marker image stays decorative */
+              aria-label={marker.name}
               className="absolute -translate-x-1/2 -translate-y-1/2"
               style={{ left: `${marker.x}%`, top: `${marker.y}%` }}
             >
               <Image
                 src={MARKER}
                 alt=""
-                aria-label={marker.name}
                 width={44}
                 height={45}
                 className="h-8 w-8 md:h-[45px] md:w-[44px]"

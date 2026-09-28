@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ComponentType, SVGProps } from "react";
 
 import { siteContent } from "@/components/sites/texstarchiropractic-com-6d11e6eb/shared/content";
@@ -32,27 +33,27 @@ export function FooterAbout() {
     <section className="relative pt-[15px]">
       <div className="mx-auto grid max-w-[1220px] grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-8 lg:flex lg:justify-between lg:gap-0">
         <div className="px-3 lg:w-1/5">
-          <h6 className="mb-3 text-[17px] leading-[28px] font-bold text-[#382F2D] uppercase">
+          <h3 className="mb-3 text-[17px] leading-[28px] font-bold text-[#382F2D] uppercase">
             {footerAbout.linksHeading}
-          </h6>
+          </h3>
           <ul className="flex flex-col gap-2.5">
             {siteContent.footerAboutLinks.map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
                   className="text-[16px] leading-[26px] font-semibold text-[#382F2D] no-underline transition-all hover:text-[#005EB8]"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
         </div>
 
         <div className="px-3 lg:w-1/5">
-          <h6 className="mb-3 text-[17px] leading-[28px] font-bold text-[#382F2D] uppercase">
+          <h3 className="mb-3 text-[17px] leading-[28px] font-bold text-[#382F2D] uppercase">
             {footerAbout.socialHeading}
-          </h6>
+          </h3>
           <ul className="mt-1 flex flex-row gap-6">
             {siteContent.social.map((link) => {
               const Icon = socialIcons[link.icon];
@@ -81,9 +82,9 @@ export function FooterAbout() {
             unoptimized
             className="mx-auto mb-4 h-auto w-[200px] md:w-[281px]"
           />
-          <h5 className="mx-auto mb-[35px] max-w-[300px] text-[20px] leading-[25px] font-semibold text-[#382F2D] text-center">
+          <h3 className="mx-auto mb-[35px] max-w-[300px] text-[20px] leading-[25px] font-semibold text-[#382F2D] text-center">
             {footerAbout.awardCaption}
-          </h5>
+          </h3>
         </div>
 
         <div className="px-3 lg:w-1/3">

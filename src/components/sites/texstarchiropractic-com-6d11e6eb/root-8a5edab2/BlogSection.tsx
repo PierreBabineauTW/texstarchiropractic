@@ -50,9 +50,9 @@ export function BlogSection() {
                 height={239}
                 className="mb-6 h-[204px] w-full object-cover md:h-[120px] lg:h-[204px]"
               />
-              <h5 className="mb-5 px-5 text-[17px] leading-[24px] font-semibold text-[#382F2D] md:text-[16px] md:leading-[21px] lg:text-[20px] lg:leading-[25px]">
+              <h3 className="mb-5 px-5 text-[17px] leading-[24px] font-semibold text-[#382F2D] md:text-[16px] md:leading-[21px] lg:text-[20px] lg:leading-[25px]">
                 {post.title}
-              </h5>
+              </h3>
               <p className="mb-6 px-5 font-sans text-[14px] leading-[22px] font-normal text-[#382F2D] lg:text-base lg:leading-[26px]">
                 {post.excerpt}
               </p>

@@ -42,14 +42,17 @@ export function OfferSection() {
               className="absolute -left-[7px] top-0 flex h-[94px] w-[94px] items-center justify-center bg-cover bg-center md:-left-[30px] md:-top-[30px] md:h-[160px] md:w-[160px] lg:-left-12 lg:-top-12 lg:h-[230px] lg:w-[230px]"
               style={{ backgroundImage: `url(${SITE_ROOT}/images/offer-starburst.png)` }}
             >
-              <h1 className={cn(HEADING, H1, "text-center")}>{price}</h1>
+              <p className={cn(HEADING, H1, "text-center")}>{price}</p>
             </div>
             <div className="ml-[88px] md:ml-[142px] lg:ml-[223px]">
               <h2 className={cn(HEADING, H2, "mb-[15px]")}>{title}</h2>
-              <h4 className={cn(HEADING, H4)}>{note}</h4>
+              <h3 className={cn(HEADING, H4)}>{note}</h3>
             </div>
             {/* the live DOM shows this CTA below 1024px only */}
-            <div className="mt-6 ml-8 w-[320px] max-w-full md:ml-[142px] lg:hidden">
+            {/* w-[320px] alone overflowed below 400px once the 8-unit indent was
+                added; derive the width from the space the indent leaves, and
+                restore the fixed 320px from md up where there is room. */}
+            <div className="mt-6 ml-8 w-[calc(100%-2rem)] max-w-[320px] md:ml-[142px] md:w-[320px] lg:hidden">
               <Button href={ctaHref} variant="solidWhite" className="w-full font-normal">
                 {cta}
               </Button>

@@ -52,6 +52,11 @@ export function HeroSection() {
               alt={hero.photoAlt}
               width={1497}
               height={1536}
+              /* Measured rendered widths: 350 @390, 328 @768, 517 @1024, 635 @1440.
+                 Without this the browser assumed 100vw and pulled the full
+                 1497px source for a 635px slot — over 2x the needed pixels,
+                 and the element is the LCP. */
+              sizes="(min-width: 1024px) 640px, (min-width: 768px) 45vw, 350px"
               className="h-auto w-full"
               loading="eager"
               fetchPriority="high"

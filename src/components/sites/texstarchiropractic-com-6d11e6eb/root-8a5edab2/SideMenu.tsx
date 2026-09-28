@@ -5,10 +5,10 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { Button } from "../shared/Button";
+import { siteConfig } from "@/lib/site";
+
 import { siteContent } from "../shared/content";
 import { ChevronDownIcon } from "../shared/icons";
-
-const SITE = siteContent.brand.origin;
 
 export type SideMenuProps = {
   open: boolean;
@@ -50,6 +50,8 @@ export function SideMenu({ open, onClose }: SideMenuProps) {
       />
 
       <aside
+        /* target of the header burger's aria-controls */
+        id="site-side-menu"
         aria-hidden={!open}
         className={cn(
           "fixed right-0 top-0 z-[10000] h-[100dvh] w-[250px] overflow-y-auto bg-[#FDFCFA]",
@@ -127,10 +129,10 @@ export function SideMenu({ open, onClose }: SideMenuProps) {
             </nav>
 
             <div className="mt-5 flex flex-col items-start gap-5">
-              <Button href={`${SITE}/schedule-consultation/`} variant="solidOrange">
+              <Button href={siteConfig.bookingUrl} variant="solidOrange">
                 Online Scheduler
               </Button>
-              <Button href={`${SITE}/contact-us/`} variant="solidOrange">
+              <Button href="/contact" variant="solidOrange">
                 Contact Us
               </Button>
             </div>

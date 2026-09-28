@@ -3,6 +3,7 @@ import { mkdir } from "node:fs/promises";
 import path from "node:path";
 
 const URL = process.env.TARGET ?? "http://127.0.0.1:3112/";
+const BASE = new globalThis.URL(URL).origin;
 const OUT = "docs/qa/polish";
 await mkdir(OUT, { recursive: true });
 
@@ -69,8 +70,24 @@ const results = [];
 
 // link integrity
   const hrefs = await p.evaluate(() => [...document.querySelectorAll("a[href]")].map((a) => a.getAttribute("href")));
-  const local = hrefs.filter((h) => h && !/^https?:\/\//.test(h) && !/^tel:/.test(h) && h !== "#");
-  results.push(["no dangling local links", local.length === 0, local.length ? local.join(",") : "all absolute/tel"]);
+  const local = [...new Set(hrefs.filter((h) => h && !/^https?:\/\//.test(h) && !/^tel:/.test(h) && h !== "#"))];
+  // Phase 1 asserted there were no local links at all, because every link then
+  // pointed at the source origin. The site now has real routes, so the invariant
+  // is that each local link resolves rather than that none of them exist.
+  const broken = [];
+  for (const href of local) {
+    const res = await p.request
+      .get(new globalThis.URL(href, BASE).toString())
+      .catch(() => null);
+    if (!res || res.status() >= 400) {
+      broken.push(`${href} (${res ? res.status() : "no response"})`);
+    }
+  }
+  results.push([
+    "every local link resolves",
+    broken.length === 0,
+    broken.length ? broken.join(", ") : `${local.length} local link(s), all 200`,
+  ]);
   results.push(["no console/network errors", errs.length === 0, errs.length ? errs.join(" | ") : "none"]);
 
   await p.locator("footer").screenshot({ path: path.join(OUT, "after-footer.png"), timeout: 30000 });

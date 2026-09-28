@@ -12,6 +12,59 @@ export type Solution = {
   href: string;
 };
 
+/** A treatment or therapy offered by the clinic. */
+export type Service = {
+  slug: string;
+  title: string;
+  /**
+   * Empty string means "copy not written yet". Components omit the paragraph
+   * rather than rendering a placeholder, so no TODO ever reaches a visitor.
+   */
+  summary: string;
+  /** Condition slugs this service relates to, when known. */
+  relatedConditions: string[];
+};
+
+/** A condition the clinic treats. */
+export type Condition = {
+  slug: string;
+  title: string;
+  description: string;
+  icon: string;
+};
+
+export type TeamMember = {
+  slug: string;
+  name: string;
+  credential: string;
+  /** Empty string means the bio has not been written yet. */
+  bio: string;
+  photo: string;
+};
+
+export type Location = {
+  slug: string;
+  name: string;
+  /** Empty strings are rendered as a documented placeholder, never invented. */
+  addressLines: string[];
+  phone: string;
+  hours: { days: string; time: string }[];
+  /** Directions link, only when a real place is configured. */
+  directionsUrl: string;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type PageIntro = {
+  eyebrow: string;
+  heading: string;
+  /** Answer-first summary. Sits directly under the H1 for AEO. */
+  summary: string;
+};
+
 export type OfferStep = {
   icon: string;
   label: string;
@@ -160,6 +213,18 @@ export type SiteContent = {
   newsletter: {
     heading: string;
   };
+  /* ---------- inner pages (copy sourced from the reference site) ---------- */
+
+  servicesPage: PageIntro & { items: Service[] };
+  conditionsPage: PageIntro & { items: Condition[] };
+  aboutPage: PageIntro;
+  teamPage: PageIntro & { members: TeamMember[] };
+  locationsPage: PageIntro & { items: Location[] };
+  contactPage: PageIntro;
+  testimonialsPage: PageIntro;
+  faqPage: PageIntro & { items: FaqItem[] };
+  blogIndexPage: PageIntro;
+
   navigation: NavGroup[];
   footerColumns: FooterColumn[];
   footerAboutLinks: NavChild[];

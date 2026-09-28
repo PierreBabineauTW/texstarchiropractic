@@ -34,9 +34,9 @@ export function CommitSection() {
                   className="h-8 w-8 shrink-0 text-[#EA7600] md:h-[45px] md:w-[44px]"
                 />
                 <div className="min-w-0 max-w-[434px] flex-1">
-                  <h4 className="mb-3 text-[20px]/[25px] font-bold text-[#382F2D] xl:text-[24px]/[29px]">
+                  <h3 className="mb-3 text-[20px]/[25px] font-bold text-[#382F2D] xl:text-[24px]/[29px]">
                     {point.title}
-                  </h4>
+                  </h3>
                   <p className="max-w-[420px] text-[16px]/[26px] font-normal text-[#382F2D]">
                     {point.description}
                   </p>

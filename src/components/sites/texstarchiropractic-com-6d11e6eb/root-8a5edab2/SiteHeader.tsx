@@ -1,15 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 import { Button } from "../shared/Button";
+import { siteConfig } from "@/lib/site";
+
 import { siteContent } from "../shared/content";
 import { MenuFineIcon } from "../shared/icons";
 
-const SITE = siteContent.brand.origin;
 const IMAGES = `${siteContent.brand.assetBase}/images`;
 
 /** The rendered height of the desktop header; the live site swaps at exactly this point. */
@@ -32,10 +34,20 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
   }, []);
 
   return (
+    /*
+     * Below md the header stays in normal flow and pins with `sticky`. The
+     * previous static -> fixed swap lifted the whole document by the header
+     * height the moment the visitor passed SCROLL_TRIGGER, which yanked the
+     * content out from under their thumb and scored CLS 0.21. Sticky keeps the
+     * rendered position at rest byte-identical while removing the jump.
+     *
+     * From md up the live site's absolute -> fixed swap is reproduced exactly,
+     * because there the hero is designed to sit underneath the tall banner.
+     */
     <header
       className={cn(
-        "z-[3] w-full",
-        scrolled ? "fixed top-0" : "md:absolute md:top-0"
+        "sticky top-0 z-[3] w-full",
+        scrolled ? "md:fixed" : "md:absolute"
       )}
     >
       {/*
@@ -49,7 +61,7 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
         )}
       >
         <div className="mx-auto flex h-full w-full items-center md:max-w-[1220px]">
-        <a href={SITE} className="flex shrink-0 items-center" aria-label="TexStar Chiropractic">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="TexStar Chiropractic">
           <Image
             src={`${IMAGES}/logo-texstar-white-horizontal.svg`}
             alt="TexStar Chiropractic"
@@ -66,17 +78,17 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
             priority
             className="md:hidden"
           />
-        </a>
+        </Link>
 
         <div className="ml-auto flex items-center gap-2.5">
           <div className="hidden items-center gap-2.5 md:flex">
             <Button
-              href={`${SITE}/schedule-consultation/`}
+              href={siteConfig.bookingUrl}
               variant={scrolled ? "outlineWhite" : "solidWhite"}
             >
               Schedule Appointment
             </Button>
-            <Button href={`${SITE}/contact-us/`} variant={scrolled ? "outlineWhite" : "solidWhite"}>
+            <Button href="/contact" variant={scrolled ? "outlineWhite" : "solidWhite"}>
               Contact Us
             </Button>
           </div>
@@ -89,7 +101,7 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
               Type size, radius, weight and border are untouched.
             */}
             <Button
-              href={`${SITE}/schedule-consultation/`}
+              href={siteConfig.bookingUrl}
               variant="outlineWhite"
               className="px-3 min-[380px]:px-5"
             >
@@ -107,7 +119,8 @@ export function SiteHeader({ onToggleMenu, menuOpen = false }: SiteHeaderProps) 
           <button
             type="button"
             onClick={onToggleMenu}
-            aria-label="Open menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-controls="site-side-menu"
             aria-expanded={menuOpen}
             className={cn(
               "flex h-[39px] w-[38px] items-center justify-center rounded-[2px] border-2 border-[#FDFCFA] text-[#FDFCFA]",

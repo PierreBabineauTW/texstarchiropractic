@@ -49,6 +49,8 @@ export function DedicateSection() {
             alt={imageAlt}
             width={1161}
             height={1040}
+            /* Rendered 348 @390, 353 @768, 481 @1024, 609 @1440. */
+            sizes="(min-width: 1024px) 615px, (min-width: 768px) 50vw, 350px"
             className="block w-full object-cover drop-shadow-[0_8px_30px_rgba(0,0,0,0.15)]"
           />
         </div>

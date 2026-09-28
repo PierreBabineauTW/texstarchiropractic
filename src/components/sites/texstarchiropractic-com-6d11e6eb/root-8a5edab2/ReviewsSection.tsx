@@ -114,7 +114,14 @@ export function ReviewsSection() {
             </p>
           </div>
           <div className="w-full px-3 text-center md:w-1/5">
-            <Button href={ctaHref} variant="solidOrange">
+            {/* The label is nowrap, which is wider than a 1/5 column at md, so
+                the button was clipped by the viewport edge. Letting it wrap
+                only bites in that column; from lg up it stays on one line. */}
+            <Button
+              href={ctaHref}
+              variant="solidOrange"
+              className="whitespace-normal text-center"
+            >
               {cta}
             </Button>
           </div>

@@ -32,9 +32,9 @@ export function SolutionsSection() {
                 height={100}
                 className="mb-5 h-20 w-auto max-w-full md:h-[100px]"
               />
-              <h4 className={cn(CARD_TITLE, "mb-[15px] font-bold text-foreground")}>
+              <h3 className={cn(CARD_TITLE, "mb-[15px] font-bold text-foreground")}>
                 {item.title}
-              </h4>
+              </h3>
               <p className={cn(COPY, "mb-[15px] max-w-[500px] text-foreground")}>
                 {item.description}
               </p>
